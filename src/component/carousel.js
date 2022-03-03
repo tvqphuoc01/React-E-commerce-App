@@ -83,8 +83,8 @@ class Carousel extends Component {
                     </button>
                 </div>
                 <div className='absolute top-20 left-20 lg:invisible'>
-                    <h1 className='text-6xl text-white font-black'>{CarouselTextLarge[this.state.CarouselImageState]}</h1>
-                    <h5 className='text-2xl text-white font-thin'>{'from ' + CarouselTextMini[this.state.CarouselImageState]}</h5>
+                    <h1 className='text-xl text-white font-black'>{CarouselTextLarge[this.state.CarouselImageState]}</h1>
+                    <h5 className='text-xl text-white font-thin'>{'from ' + CarouselTextMini[this.state.CarouselImageState]}</h5>
                 </div>
             </div>
         )
