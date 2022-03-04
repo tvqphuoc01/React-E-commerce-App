@@ -10,7 +10,7 @@ class IconBox extends Component {
                 {
                     largeContent.map((item, index) => (
                         <div className='flex py-8 items-center justify-center content-between'>
-                            <i className={iconContent[index]}></i>
+                            <i className={iconContent[index] + ' text-[#445f84]'}></i>
                             <div>
                                 <h1>{item}</h1>
                                 <h4>{miniContent[index]}</h4>
