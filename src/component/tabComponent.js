@@ -10,13 +10,13 @@ class TabDesign extends Component {
         return(
             <Tabs defaultActiveKey="1" style={{'alignItems': 'center', paddingBottom: '10px'}}>
                 {
-                    this.props.optProducts.map((item, index) => (
-                        <TabPane tab={item} key={index}>
-                            <div className='flex'>
+                    this.props.optProducts.map((optItem, index) => (
+                        <TabPane tab={optItem} key={index}>
+                            <div className='lg:flex md:grid md:grid-cols-2'>
                                 {
-                                    this.props.products.map((item, index) => (
-                                        <div className='px-4'>
-                                            <Product1 productName={item} key={index} productImage={this.props.productImage[index]}/>
+                                    this.props.products.slice(index * 4, index * 4 + 4).map((item, imgIndex) => (
+                                        <div className='px-4 py-4'>
+                                            <Product1 productName={item} key={optItem + index} productImage={this.props.productImage.slice(index * 4, index * 4 + 4)[imgIndex]}/>
                                         </div>
                                     ))
                                 }
