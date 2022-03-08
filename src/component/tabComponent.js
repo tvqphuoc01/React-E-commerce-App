@@ -14,9 +14,14 @@ class TabDesign extends Component {
                         <TabPane tab={optItem} key={index}>
                             <div className='lg:flex md:grid md:grid-cols-2'>
                                 {
-                                    this.props.products.slice(index * 4, index * 4 + 4).map((item, imgIndex) => (
+                                    this.props.products.slice(index * 4, index * 4 + 4).map((item, infoIndex) => (
                                         <div className='px-4 py-4'>
-                                            <Product1 productName={item} key={optItem + index} productImage={this.props.productImage.slice(index * 4, index * 4 + 4)[imgIndex]}/>
+                                            <Product1 
+                                                productName={item} key={optItem + index} 
+                                                productImage={this.props.productImage.slice(index * 4, index * 4 + 4)[infoIndex]}
+                                                productRate={this.props.productRate.slice(index * 4, index * 4 + 4)[infoIndex]}
+                                                productPrice={this.props.productPrice.slice(index * 4, index * 4 + 4)[infoIndex]}
+                                            />
                                         </div>
                                     ))
                                 }
