@@ -65,7 +65,7 @@ class Navbar extends Component {
                                 <i className="fal fa-cart-plus text-2xl font-thin z-20 hover:text-gray-500 text-sky-800"></i>
                             </div>
                         </div>
-                        <span className="rounded-full bg-[#445f84] p-1 pr-2 pl-2 text-white font-mono text-sm  leading-tight text-center">5</span>
+                        <span className="rounded-full bg-[#445f84] p-1 pr-2 pl-2 text-white font-mono text-sm leading-tight text-center">5</span>
                     </div>
                 </div>
             </div>

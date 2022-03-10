@@ -6,7 +6,7 @@ class Header extends Component {
     render() {
         return(
             <div>
-                <div className='lg:invisible'>
+                <div className='lg:hidden'>
                     <MobileNavBar />
                 </div>
                 <div className='hidden lg:block'>
