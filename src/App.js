@@ -1,16 +1,24 @@
 import './App.css';
-import Header from '../src/component/header';
-import Body from './component/body';
 import { Component} from 'react';
-import Footer from './component/footer';
+import Index from './page';
+import Login from './page/login';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Body />
-        <Footer />
-      </div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Index />}>
+          </Route>
+          <Route path='/login' element={<Login />}>
+          </Route>
+        </Routes>
+      </Router>
     )
   }
 }

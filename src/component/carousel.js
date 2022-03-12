@@ -68,10 +68,10 @@ class Carousel extends Component {
                     </div>
                     <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
                         <button onClick={this.onClickPrevPic} className='text-white p-1 pr-2 pl-2 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition'>
-                            <i className="fal fa-arrow-circle-left text-4xl"></i>
+                            <i className="fa-solid fa-angle-left text-4xl"></i>
                         </button>
                         <button onClick={this.onClickNextPic} className='text-white p-1 pr-2 pl-2 rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-100 transition'>
-                            <i className="fal fa-arrow-circle-right text-4xl"></i>
+                            <i className="fa-solid fa-angle-right text-4xl"></i>
                         </button>
                     </div>
                 </div>

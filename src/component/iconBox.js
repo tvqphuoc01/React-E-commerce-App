@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const largeContent = ["FREE SHIPPING", "FREE RETURNS", "GET 20% OFF 1 ITEM", "WE SUPPORT"];
 const miniContent = ["Order 50$ or More", "Within 30 days", "When you Sign Up", "24/7 Amazing services"];
-const iconContent = ["fal fa-rocket text-4xl px-4", "fas fa-redo text-4xl px-4", "fal fa-info-circle text-4xl px-4", "fas fa-headset text-4xl px-4"];
+const iconContent = ["fa-solid fa-rocket text-4xl px-4", "fas fa-redo text-4xl px-4", "fa-solid fa-circle-info text-4xl px-4", "fas fa-headset text-4xl px-4"];
 class IconBox extends Component {
     render() {
         return(

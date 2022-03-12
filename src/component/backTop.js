@@ -17,7 +17,7 @@ class BackToTop extends Component {
         return(
             <BackTop>
                 <div style={style}>
-                    <i class="fas fa-arrow-alt-up"></i>
+                    <i class="fa-solid fa-arrow-up"></i>
                 </div>
             </BackTop>
         )
