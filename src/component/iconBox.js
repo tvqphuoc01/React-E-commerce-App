@@ -9,7 +9,7 @@ class IconBox extends Component {
             <div className='md:grid md:grid-cols-4 md:gap-4 xl:max-w-screen-xl md:max-w-screen-md sm:flex m-auto'>
                 {
                     largeContent.map((item, index) => (
-                        <div className='flex py-8 items-center justify-center content-between'>
+                        <div className='flex py-8 items-center justify-center content-between' key={index}>
                             <i className={iconContent[index] + ' text-[#445f84]'}></i>
                             <div>
                                 <h1>{item}</h1>

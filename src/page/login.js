@@ -19,7 +19,7 @@ class Login extends Component {
           </div>
           <div className='flex justify-center mx-10'>
             <Tabs defaultActiveKey="1">
-              <TabPane tab="Sign In" key="1" style={{'color': 'rgb(74,94,134)', paddingBottom: '10px'}}>
+              <TabPane tab="Sign In" key="1">
                 <LoginForm />
               </TabPane>
               <TabPane tab="Register" key="2">
