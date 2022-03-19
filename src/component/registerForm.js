@@ -21,10 +21,10 @@ class RegisterForm extends Component {
         <Form
             name="basic"
             labelCol={{
-                span: 8,
+                span: 10,
             }}
             wrapperCol={{
-                span: 16,
+                span: 20,
             }}
             initialValues={{
                 remember: true,
@@ -59,6 +59,19 @@ class RegisterForm extends Component {
                 <Input.Password />
             </Form.Item>
             
+            <Form.Item
+                label="Re-type Password"
+                name="password"
+                rules={[
+                    {
+                        required: true,
+                        message: 'Please Re-type your password!',
+                    },
+                ]}
+            >
+                <Input.Password />
+            </Form.Item>
+
             <Form.Item
                 label="Email"
                 name="Email"
