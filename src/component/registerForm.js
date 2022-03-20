@@ -61,7 +61,7 @@ class RegisterForm extends Component {
             
             <Form.Item
                 label="Re-type Password"
-                name="password"
+                name="retye-password"
                 rules={[
                     {
                         required: true,
