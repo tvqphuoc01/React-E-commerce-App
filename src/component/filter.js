@@ -39,34 +39,42 @@ class Filter extends Component {
               <div className='grid grid-cols-9 px-4 py-4'>
                 <div className='col-span-3 relative' onClick={() => this.currentColor(1)}>
                   <i className={this.state.color === 1 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
-                  <button className={this.state.color === 1 ? 'rounded-full bg-red-700 px-5 py-5' : 'rounded-full bg-red-700 px-5 py-5'}></button>
+                  <button className='rounded-full bg-red-700 px-5 py-5'></button>
                 </div>
-                <div className='col-span-3' onClick={() => this.currentColor(2)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(2)}>
+                  <i className={this.state.color === 2 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-orange-700 px-5 py-5'></button>
                 </div>
-                <div className='col-span-3' onClick={() => this.currentColor(3)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(3)}>
+                  <i className={this.state.color === 3 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-yellow-400 px-5 py-5'></button>
                 </div>
               </div>
               <div className='grid grid-cols-9 px-4 py-4'>
-                <div className='col-span-3' onClick={() => this.currentColor(4)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(4)}>
+                  <i className={this.state.color === 4 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-lime-500 px-5 py-5'></button>
                 </div>
-                <div className='col-span-3' onClick={() => this.currentColor(5)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(5)}>
+                  <i className={this.state.color === 5 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-cyan-400 px-5 py-5'></button>
                 </div>
-                <div className='col-span-3' onClick={() => this.currentColor(6)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(6)}>
+                  <i className={this.state.color === 6 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-violet-600 px-5 py-5'></button>
                 </div>
               </div>
               <div className='grid grid-cols-9 px-4 py-4'>
-                <div className='col-span-3' onClick={() => this.currentColor(7)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(7)}>
+                  <i className={this.state.color === 7 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-purple-500 px-5 py-5'></button>
                 </div>
-                <div className='col-span-3' onClick={() => this.currentColor(8)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(8)}>
+                  <i className={this.state.color === 8 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-pink-500 px-5 py-5'></button>
                 </div>
-                <div className='col-span-3' onClick={() => this.currentColor(9)}>
+                <div className='col-span-3 relative' onClick={() => this.currentColor(9)}>
+                  <i className={this.state.color === 9 ? "fa-solid fa-check text-white absolute left-3.5 bottom-3.5" : "invisible"}></i>
                   <button className='rounded-full bg-emerald-500 px-5 py-5'></button>
                 </div>
               </div>
