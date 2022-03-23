@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Layout, Row, Divider } from 'antd';
 import ProductCard from '../component/productCard';
 import Header from '../component/header';
