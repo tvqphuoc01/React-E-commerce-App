@@ -15,7 +15,7 @@ class TabDesign extends Component {
                             <div className='lg:flex md:grid md:grid-cols-2'>
                                 {
                                     this.props.products.slice(index * 4, index * 4 + 4).map((item, infoIndex) => (
-                                        <div className='px-4 py-4'>
+                                        <div className='px-4 py-4' key={infoIndex}>
                                             <Product1 
                                                 productName={item} key={optItem + index} 
                                                 productImage={this.props.productImage.slice(index * 4, index * 4 + 4)[infoIndex]}

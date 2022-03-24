@@ -42,22 +42,22 @@ class Footer extends Component {
                             <div className='flex'>
                                 <a href="#">
                                     <div className='border rounded-full border-white hover:cursor-pointer hover:border-[#4a5e86] transition duration-500 ease-in-out mx-3 my-4'>
-                                        <i class="fab fa-facebook-f text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-4 py-2"></i>
+                                        <i className="fab fa-facebook-f text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-4 py-2"></i>
                                     </div> 
                                 </a>
                                 <a href="#">
                                     <div className='border rounded-full border-white hover:cursor-pointer hover:border-[#4a5e86] transition duration-500 ease-in-out mx-3 my-4'>
-                                        <i class="fab fa-twitter text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-3 py-2"></i>
+                                        <i className="fab fa-twitter text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-3 py-2"></i>
                                     </div>
                                 </a>
                                 <a href="#">
                                     <div className='border rounded-full border-white hover:cursor-pointer hover:border-[#4a5e86] transition duration-500 ease-in-out mx-3 my-4'>
-                                        <i class="fab fa-instagram text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-3.5 py-2"></i>
+                                        <i className="fab fa-instagram text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-3.5 py-2"></i>
                                     </div>
                                 </a>
                                 <a href="#">
                                     <div className='border rounded-full border-white hover:cursor-pointer hover:border-[#4a5e86] transition duration-500 ease-in-out mx-3 my-4'>
-                                        <i class="fab fa-youtube text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-3 py-2"></i>
+                                        <i className="fab fa-youtube text-2xl text-[#777777] hover:text-white transition duration-500 ease-in-out px-3 py-2"></i>
                                     </div>
                                 </a>
                             </div>

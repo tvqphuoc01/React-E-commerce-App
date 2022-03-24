@@ -4,6 +4,7 @@ import ProductCard from '../component/productCard';
 import Header from '../component/header';
 import Footer from '../component/footer';
 import Filter from '../component/filter';
+import BackToTop from '../component/backTop';
 const { Content } = Layout;
 const ProductPage = () => {
   const items = [
@@ -218,6 +219,7 @@ const ProductPage = () => {
   return (
     <div>
         <Header />
+        <BackToTop />
         <Layout style={{ padding: '24px 0' }}>
           <div className='md:flex'>
             <Filter />

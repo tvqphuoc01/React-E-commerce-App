@@ -78,7 +78,7 @@ class Carousel extends Component {
                 <div className='absolute top-60 left-60 hidden lg:block'>
                     <h1 className='text-6xl text-white font-black'>{CarouselTextLarge[this.state.CarouselImageState]}</h1>
                     <h5 className='text-2xl text-white font-thin'>{'from ' + CarouselTextMini[this.state.CarouselImageState]}</h5>
-                    <button class="bg-white hover:bg-[#445f84] hover:text-white text-[#445f84] font-bold mt-5 py-2 px-4 rounded-full">
+                    <button className="bg-white hover:bg-[#445f84] hover:text-white text-[#445f84] font-bold mt-5 py-2 px-4 rounded-full">
                         Shop Now
                     </button>
                 </div>

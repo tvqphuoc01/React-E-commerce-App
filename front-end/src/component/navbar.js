@@ -120,7 +120,7 @@ class Navbar extends Component {
                         <div className="flex justify-center items-center h-12 pr-3 pl-5">
                             <div className="relative items-center">
                                 <Link to='/cart'>
-                                    <i class="fa-solid fa-cart-plus text-2xl z-20 hover:text-gray-500 text-[#445f84]"></i>
+                                    <i className="fa-solid fa-cart-plus text-2xl z-20 hover:text-gray-500 text-[#445f84]"></i>
                                 </Link>
                             </div>
                         </div>
