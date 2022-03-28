@@ -4,6 +4,7 @@ import Index from './page';
 import Login from './page/login';
 import CartPage from './page/cart';
 import ProductPage from './page/products';
+import Register from './page/register';
 import {
   BrowserRouter as Router,
   Route,
@@ -17,6 +18,7 @@ class App extends Component {
         <Routes>
           <Route path='/' element={<Index />}></Route>
           <Route path='/login' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
           <Route path='/cart' element={<CartPage />}></Route>
           <Route path='/product' element={<ProductPage />}></Route>
         </Routes>

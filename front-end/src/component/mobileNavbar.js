@@ -42,7 +42,8 @@ class MobileNavBar extends Component {
                             <li className="active"><a href="#" className="block text-gray-600 font-thin text-sm text-center px-2 py-4 font-semibold">CALL: +0123 456 789</a></li>
                             <li><a href="#" className="block text-gray-600 font-thin text-sm text-center px-2 py-4 transition duration-300">ABOUT US</a></li>
                             <li><a href="#" className="block text-gray-600 font-thin text-sm text-center px-2 py-4 transition duration-300">CONTACT US</a></li>
-                            <li><a href="#" className="block text-gray-600 font-thin text-sm text-center px-2 py-4 transition duration-300">LOGIN</a></li>
+                            <li><a href="/login" className="block text-gray-600 font-thin text-sm text-center px-2 py-4 transition duration-300">LOGIN</a></li>
+                            <li><a href="/register" className="block text-gray-600 font-thin text-sm text-center px-2 py-4 transition duration-300">REGISTER</a></li>
                         </ul>
                     </div>
                 </div>

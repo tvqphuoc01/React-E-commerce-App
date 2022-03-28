@@ -1,15 +1,14 @@
 import { Form, Input, Button, Checkbox } from 'antd';
 import React, { Component } from 'react';
-
+import axios from 'axios';
 class RegisterForm extends Component {
     constructor() {
         super();
         this.onFinish = this.onFinish.bind(this);
         this.onFinishFailed = this.onFinishFailed.bind(this);
     }
-
     onFinish = (values) => {
-        console.log('Success:', values);
+        axios.post('http://localhost:9000/', { values })
     };
 
     onFinishFailed = (errorInfo) => {
