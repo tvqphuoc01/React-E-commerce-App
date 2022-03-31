@@ -5,8 +5,12 @@ import Header from '../component/header';
 import Footer from '../component/footer';
 import Filter from '../component/filter';
 import BackToTop from '../component/backTop';
+import axios from 'axios';
+
 const { Content } = Layout;
+
 const ProductPage = () => {
+  axios.get('http://localhost:9000/product');
   const items = [
     {
       itemId: 0,
