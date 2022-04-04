@@ -54,12 +54,12 @@ class Navbar extends Component {
                                     <div id="dropdownNavbar" className={this.state.hidden ? classNameDropDownHIdden : classNameDropDown}>
                                         <ul className="py-1" aria-labelledby="dropdownLargeButton">
                                             <li>
-                                                <Link to='/product' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
+                                                <Link to='/product?brandId=0' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
                                                     NIKE
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to='/product' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
+                                                <Link to='/product?brandId=1' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
                                                     ADIDAS
                                                 </Link>
                                             </li>

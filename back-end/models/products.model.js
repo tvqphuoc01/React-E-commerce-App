@@ -57,7 +57,10 @@ const product = new mongoose.Schema({
   price: String,
   rate: Number,
   comment: [commentSchema],
-  info: String
+  info: String,
+  image: String,
+  availableSize: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  availableColor: [0, 0, 0, 0, 0, 0, 0, 0, 0]
 });
 
 module.exports = mongoose.model('product', product);

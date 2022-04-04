@@ -1,7 +1,11 @@
-const productModel = require('../models/products.model');
+const productService = require('../service/product.service');
 
-const productController = async function(req, res) {
-    console.log('hello');
+const productController = function(req, res) {
+    const { brandId } = req.query;
+    productService.getProductByBrand(brandId).then((data)=>{
+        res.json(data);
+    });
+    return;
 }
 
 module.exports = {
