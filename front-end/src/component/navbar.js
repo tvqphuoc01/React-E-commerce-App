@@ -54,29 +54,16 @@ class Navbar extends Component {
                                     <div id="dropdownNavbar" className={this.state.hidden ? classNameDropDownHIdden : classNameDropDown}>
                                         <ul className="py-1" aria-labelledby="dropdownLargeButton">
                                             <li>
-                                                <Link to='/product?brandId=0' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    NIKE
-                                                </Link>
+                                                <a href='/product?brandId=624ca1f47e4a287eb075891a' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> NIKE </a>
                                             </li>
                                             <li>
-                                                <Link to='/product?brandId=1' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    ADIDAS
-                                                </Link>
+                                                <a href='/product?brandId=624ca1f47e4a287eb075891b' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> ADIDAS </a>
                                             </li>
                                             <li>
-                                                <Link to='/' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    CONVERSE
-                                                </Link>
+                                                <a href='/product?brandId=624ca1f47e4a287eb075891c' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> CONVERSE </a>
                                             </li>
                                             <li>
-                                                <Link to='/' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    PUMA
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to='/' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    SALE OFF
-                                                </Link>
+                                                <a href='/product?brandId=3' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> PUMA </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -86,19 +73,13 @@ class Navbar extends Component {
                                     <div id="dropdownNavbar2" className={this.state.hidden2 ? classNameDropDownHIdden : classNameDropDown}>
                                         <ul className="py-1" aria-labelledby="dropdownLargeButton">
                                             <li>
-                                                <Link to='/' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    NIKE
-                                                </Link>
+                                                <a href='/product?brandId=0' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> NIKE </a>
                                             </li>
                                             <li>
-                                                <Link to='/' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    ADIDAS
-                                                </Link>
+                                                <a href='/product?brandId=1' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> ADIDAS </a>
                                             </li>
                                             <li>
-                                                <Link to='/' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">
-                                                    SALE OFF
-                                                </Link>
+                                                <a href='/product?brandId=2' className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"> SALE OFF </a>
                                             </li>
                                         </ul>
                                     </div>

@@ -18,12 +18,13 @@ function useQuery() {
 
 const ProductPage = () => {
   const [data, setData] = useState([]); // default value
-
+  const [brandData, setBrandData] = useState({});
   const query = useQuery();
   const brandId = query.get("brandId");
   function getData() {
     axios.get(`http://localhost:9000/product?brandId=${brandId}`).then((res) => {
-      setData(res.data);
+      setData(res.data.productData);
+      setBrandData(res.data.brand[0]);
     });
   }
   
@@ -41,14 +42,11 @@ const ProductPage = () => {
               <Content className='site-layout-background px-10 py-10'>
                   <div className='lg:grid lg:grid-cols-12 w-full sm:flex'>
                       <div className='bg-white rounded-xl border ml-10 px-5 lg:col-span-4'>
-                          <Divider orientation='left'>NIKE</Divider>
+                          <Divider orientation='left'>{brandData.brandName}</Divider>
                           <div className='lg:flex pb-5'>
-                              <img src="nike.jpg" className='border-solid max-w-2xl rounded-xl border max-h-32 mx-5'></img>
+                              <img src={brandData.image} className='border-solid max-w-2xl rounded-xl border max-h-32 mx-5'></img>
                               <p>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                                  industry. Lorem Ipsum has been the industry's standard dummy text
-                                  ever since the 1500s, when an unknown printer took a galley of type
-                                  and scrambled it to make a type specimen book.
+                                  {brandData.info}
                               </p>
                           </div>
                       </div>

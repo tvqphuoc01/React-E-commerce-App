@@ -53,7 +53,7 @@ const product = new mongoose.Schema({
     type: String,
     required: true,
   },
-  brand: Number,
+  brand: String,
   price: String,
   rate: Number,
   comment: [commentSchema],
