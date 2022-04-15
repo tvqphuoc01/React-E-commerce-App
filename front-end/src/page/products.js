@@ -18,16 +18,40 @@ function useQuery() {
 
 const ProductPage = () => {
   const [data, setData] = useState([]); // default value
+  const [displayData, setDisplayData] = useState([]);
   const [brandData, setBrandData] = useState({});
   const query = useQuery();
   const brandId = query.get("brandId");
   function getData() {
     axios.get(`http://localhost:9000/product?brandId=${brandId}`).then((res) => {
       setData(res.data.productData);
+      setDisplayData(res.data.productData);
       setBrandData(res.data.brand[0]);
     });
   }
   
+  function updateProductsDisplayByColor(color) {
+    setDisplayData(data);
+    let newData = [];
+    data.map((item) => {
+      if(item.availableColor[color] !== 0) {
+        newData.push(item);
+      }
+    });
+    setDisplayData(newData);
+  }
+
+  function updateProductsDisplayBySize(size) {
+    setDisplayData(data);
+    let newData = [];
+    displayData.map((item) => {
+      if(item.availableSize[size] !== 0) {
+        newData.push(item);
+      }
+    });
+    setDisplayData(newData);
+  }
+
   useEffect(() => {
     getData();
   }, []);
@@ -38,7 +62,7 @@ const ProductPage = () => {
           <BackToTop />
           <Layout style={{ padding: '24px 0' }}>
             <div className='md:flex'>
-              <Filter />
+              <Filter dataLength={data.length} colorFilterFunction={updateProductsDisplayByColor} sizeFilterFunction={updateProductsDisplayBySize}/>
               <Content className='site-layout-background px-10 py-10'>
                   <div className='lg:grid lg:grid-cols-12 w-full sm:flex'>
                       <div className='bg-white rounded-xl border ml-10 px-5 lg:col-span-4'>
@@ -52,7 +76,7 @@ const ProductPage = () => {
                       </div>
                       <div className='bg-white rounded-xl border ml-10 px-5 lg:col-span-8 sm:col-span-12'>
                           <div className='pt-5'>
-                            <h1 className='text-4xl text-center m-0'>Men's Shoes(405)</h1>
+                            <h1 className='text-4xl text-center m-0'>Men's Shoes({data.length})</h1>
                           </div>
                           <div className='flex items-center justify-center pt-5 pb-5'>
                             <div className='flex items-center'>
@@ -85,7 +109,7 @@ const ProductPage = () => {
                   </div>
                   <center>
                       <Row justify='start' gutter={[40, 16]} className='products-row px-10 py-10'>
-                        { data.map((elem) => {
+                        { displayData.map((elem) => {
                             return (
                               <ProductCard
                                   key={elem._id}

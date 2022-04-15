@@ -77,22 +77,6 @@ const ProductCard = (props) => {
               Add to cart
             </Button>
           </Col>
-          <Col>
-            <Button
-              title='Remove item from cart'
-              disabled={
-                !(props.cart
-                  ? props.cart.filter((elem) => elem.itemId === props.itemId)
-                      .length
-                  : false)
-              }
-              onClick={() => props.remove_single(props.itemId)}
-              type='primary'
-              danger
-            >
-              <DeleteOutlined />
-            </Button>
-          </Col>
         </Row>
       </Card>
     </Col>
