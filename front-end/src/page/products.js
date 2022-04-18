@@ -6,6 +6,7 @@ import Footer from '../component/footer';
 import Filter from '../component/filter';
 import BackToTop from '../component/backTop';
 import axios from 'axios';
+import { notification } from 'antd';
 import { useLocation } from "react-router-dom";
 
 const { Content } = Layout;
@@ -22,6 +23,7 @@ const ProductPage = () => {
   const [brandData, setBrandData] = useState({});
   const query = useQuery();
   const brandId = query.get("brandId");
+
   function getData() {
     axios.get(`http://localhost:9000/product?brandId=${brandId}`).then((res) => {
       setData(res.data.productData);
@@ -50,6 +52,47 @@ const ProductPage = () => {
       }
     });
     setDisplayData(newData);
+  }
+
+  notification.config({
+    
+  });
+
+  const openNotification = (data) => {
+    notification.open({
+      message: 'Add Item Successful',
+      description: data.productName + ' added to your Cart',
+      onClick: () => {
+        console.log('Notification Clicked!');
+      },
+      style: {
+        backgroundColor: '#23c55e',
+        'font-weight': '500'
+      }
+    });
+  };
+
+  function addProduct(data) {
+    if(localStorage.getItem('localCart') === null) {
+      localStorage.setItem('localCart', JSON.stringify([]));
+    }
+    let resetLocalStored = [...JSON.parse(localStorage.getItem('localCart'))];
+    if(resetLocalStored.some(object => object._id === data._id)) {
+      let index = resetLocalStored.findIndex(object => ((object._id === data._id)));
+      openNotification(resetLocalStored[index]);
+      resetLocalStored[index].Qty++;
+    } else {
+      openNotification(data);
+      let newProduct = {
+        _id: data._id,
+        productName: data.productName,
+        Qty: 1,
+        price: data.price
+      }
+      resetLocalStored.push(newProduct);
+    }
+    console.log(resetLocalStored);
+    localStorage.setItem('localCart', JSON.stringify(resetLocalStored));
   }
 
   useEffect(() => {
@@ -112,11 +155,13 @@ const ProductPage = () => {
                         { displayData.map((elem) => {
                             return (
                               <ProductCard
+                                  data={elem}
                                   key={elem._id}
                                   itemName={elem.productName}
                                   itemDescription={elem.info}
                                   itemImage={elem.image}
                                   itemPrice={elem.price}
+                                  addProduct={addProduct}
                               />
                             );
                         })}
