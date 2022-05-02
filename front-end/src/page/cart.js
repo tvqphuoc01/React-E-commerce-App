@@ -27,6 +27,15 @@ const CartPage = (props) => {
         key: 'itemId',
       },
       {
+        title: 'Image',
+        dataIndex: 'image',
+        width: 150,
+        maxWidth: 150,
+        render: (t, r) => <img src={`${r.image}`} />,
+        key: 'itemImage',
+
+      },
+      {
         title: 'Name',
         dataIndex: 'productName',
         key: 'itemName',
@@ -50,10 +59,7 @@ const CartPage = (props) => {
         if (data) {
             setData(data);
         }
-        console.log(data);
     }, []);
-    
-    const total = [0];
   
     return (
       <div>
@@ -105,10 +111,7 @@ const CartPage = (props) => {
                         <Col>
                         <Statistic
                             title='Total (tax incl).'
-                            value={`$ ${Math.round(
-                            total.reduce((total, num) => total + num)
-                            ).toFixed(2)}`}
-                            precision={2}
+                            value={data.reduce((partialSum, element) => partialSum + parseInt(element.price.split('$')[1]) * parseInt(element.Qty), 0) + '$'}
                         />
                         <Button style={{ marginTop: 16 }} type='primary'>
                             Pay now <CreditCardOutlined />

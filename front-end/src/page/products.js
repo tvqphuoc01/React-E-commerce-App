@@ -87,7 +87,8 @@ const ProductPage = () => {
         _id: data._id,
         productName: data.productName,
         Qty: 1,
-        price: data.price
+        price: data.price,
+        image: data.image
       }
       resetLocalStored.push(newProduct);
     }
