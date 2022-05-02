@@ -20,6 +20,20 @@ const { Content } = Layout;
 const CartPage = (props) => {
     const [data, setData] = useState([]); // default value
 
+    function deleteItem(itemId) {
+      let localCartData = [...JSON.parse(localStorage.getItem('localCart'))];
+      let index = localCartData.findIndex(object => ((object._id === itemId)));
+      localCartData.splice(index, 1);
+      localStorage.setItem('localCart', JSON.stringify(localCartData));
+      setData(localCartData);
+    }
+
+    function deleteAllItem() {
+      let localCartData = [];
+      localStorage.setItem('localCart', JSON.stringify(localCartData));
+      setData(localCartData);
+    }
+
     const columns = [
       {
         title: 'Id',
@@ -51,8 +65,16 @@ const CartPage = (props) => {
         key: 'itemPrice',
         dataIndex: 'price',
       },
+      {
+        title: '',
+        width: 50,
+        maxWidth: 50,
+        render: (t,r) =>  <Button type='default' onClick={() => deleteItem(r._id)} danger>
+                            <DeleteOutlined />
+                          </Button>,
+        key: 'deleteItem',
+      }
     ];
-
 
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem('localCart'));
@@ -73,7 +95,7 @@ const CartPage = (props) => {
                     <br></br>
                     <Row justify='end'>
                         <Col>
-                        <Button type='default' onClick={props.removeCart} danger>
+                        <Button type='default' onClick={deleteAllItem} danger>
                             <DeleteOutlined />
                             &nbsp;
                             <span>Delete Cart</span>
