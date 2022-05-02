@@ -3,26 +3,6 @@ import { Card, Col, Row, Button, Divider, notification } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 
 const ProductCard = (props) => {
-  const addCart = (item) => {
-    props.add_cart(item);
-    openNotification();
-  };
-
-  const openNotification = () => {
-    notification.open({
-      style: {
-        color: '#1DA57A',
-        fontWeight: 'bold',
-        opacity: 0.9,
-        cursor: 'pointer',
-      },
-      placement: 'bottomRight',
-      message: 'Item Added',
-      description: `${props.itemName} is added to your cart.`,
-      duration: 4,
-    });
-  };
-
   return (
     <Col key={props.itemId} md={8}>
       <Card
@@ -64,14 +44,7 @@ const ProductCard = (props) => {
                       .length
                   : false
               }
-              onClick={() =>
-                addCart({
-                  itemId: props.itemId,
-                  itemName: props.itemName,
-                  itemPrice: props.itemPrice,
-                  itemDescription: props.itemDescription,
-                })
-              }
+              onClick={() => props.addProduct(props.data)}
               type='primary'
             >
               Add to cart
