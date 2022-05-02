@@ -19,6 +19,7 @@ function useQuery() {
 
 const ProductPage = () => {
   const [data, setData] = useState([]); // default value
+  const [productCount, setProductCount] = useState(0);
   const [displayData, setDisplayData] = useState([]);
   const [brandData, setBrandData] = useState({});
   const query = useQuery();
@@ -54,9 +55,7 @@ const ProductPage = () => {
     setDisplayData(newData);
   }
 
-  notification.config({
-    
-  });
+  notification.config({});
 
   const openNotification = (data) => {
     notification.open({
@@ -92,8 +91,8 @@ const ProductPage = () => {
       }
       resetLocalStored.push(newProduct);
     }
-    console.log(resetLocalStored);
     localStorage.setItem('localCart', JSON.stringify(resetLocalStored));
+    setProductCount(resetLocalStored.length);
   }
 
   useEffect(() => {

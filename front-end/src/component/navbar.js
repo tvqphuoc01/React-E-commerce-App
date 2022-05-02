@@ -34,7 +34,7 @@ class Navbar extends Component {
     render() {
         const classNameDropDownHIdden = 'hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600';
         const classNameDropDown = 'block z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 dropdownTrue';
-
+        let localCartData = [...JSON.parse(localStorage.getItem('localCart'))]
         return(
             <div className='flex'>
                 <div className='flex min-w-1/2 mr-auto ml-auto'>
@@ -105,7 +105,7 @@ class Navbar extends Component {
                                 </Link>
                             </div>
                         </div>
-                        <span className="rounded-full bg-[#445f84] p-1 pr-2 pl-2 text-white font-mono text-sm leading-tight text-center">5</span>
+                        <span className="rounded-full bg-[#445f84] p-1 pr-2 pl-2 text-white font-mono text-sm leading-tight text-center">{localCartData.length}</span>
                     </div>
                 </div>
             </div>
