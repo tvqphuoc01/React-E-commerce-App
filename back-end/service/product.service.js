@@ -14,7 +14,16 @@ const getProductByBrand = async function (brandCode) {
     return productData;
   }
 
+// Get product by Id
+const getProductById = async function(productId) {
+  const productData = await productModel.findOne(
+    { _id: productId }
+  ).lean().exec();
+  return productData;
+}
+
 module.exports = {
     getAllProductsData,
-    getProductByBrand
+    getProductByBrand,
+    getProductById
 }

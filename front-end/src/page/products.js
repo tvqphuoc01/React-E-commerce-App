@@ -157,6 +157,7 @@ const ProductPage = () => {
                               <ProductCard
                                   data={elem}
                                   key={elem._id}
+                                  itemId={elem._id}
                                   itemName={elem.productName}
                                   itemDescription={elem.info}
                                   itemImage={elem.image}

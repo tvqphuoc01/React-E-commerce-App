@@ -34,7 +34,12 @@ class Navbar extends Component {
     render() {
         const classNameDropDownHIdden = 'hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600';
         const classNameDropDown = 'block z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 dropdownTrue';
-        let localCartData = [...JSON.parse(localStorage.getItem('localCart'))]
+        let localCartData;
+        if(localStorage.getItem('localCart') !== null) {
+            localCartData = [...JSON.parse(localStorage.getItem('localCart'))]
+        } else {
+            localCartData = []
+        }
         return(
             <div className='flex'>
                 <div className='flex min-w-1/2 mr-auto ml-auto'>

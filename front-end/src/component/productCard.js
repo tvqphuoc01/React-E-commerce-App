@@ -17,23 +17,26 @@ const ProductCard = (props) => {
           />
         }
       >
-        <Card.Meta
-          title={<h2>{props.itemName}</h2>}
-          description={props.itemDescription}
-        />
-        <br></br>
-        <Divider orientation='center'>Price</Divider>
-        <p
-          style={{
-            lineHeight: '28px',
-            fontWeight: 'lighter',
-            fontSize: '46px',
-            color: '#2ecc71',
-            textAlign: 'center',
-          }}
-        >
-          {props.itemPrice}
-        </p>
+        <a href={'/productDetail?productId=' + props.itemId}>
+          <Card.Meta
+            title={<h2>{props.itemName}</h2>}
+            description={props.itemDescription}
+          />
+          <br></br>
+          <Divider orientation='center'>Price</Divider>
+          <p
+            style={{
+              lineHeight: '28px',
+              fontWeight: 'lighter',
+              fontSize: '46px',
+              color: '#2ecc71',
+              textAlign: 'center',
+            }}
+          >
+            {props.itemPrice}
+          </p>
+        </a>
+        
         <Row gutter={[10]} className='add-cart-btn-row'>
           <Col>
             <Button
